@@ -1,0 +1,131 @@
+.fetcher-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.fetcher-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+    .fetcher-card h2 {
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+    .input-group label {
+        display: block;
+        color: #555;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+    .input-wrapper input {
+        width: 100%;
+        padding: 0.75rem 3rem 0.75rem 1rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-wrapper input:disabled {
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+            color: #999;
+        }
+
+.input-suffix {
+    position: absolute;
+    right: 1rem;
+    color: #999;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-help {
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.fetch-button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+    .fetch-button:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .fetch-button:active:not(:disabled) {
+        transform: translateY(0);
+    }
+
+    .fetch-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+.spinner-small {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .fetcher-card {
+        padding: 1.5rem;
+    }
+
+        .fetcher-card h2 {
+            font-size: 1.2rem;
+        }
+}
