@@ -15,7 +15,7 @@ const App: React.FC = () => {
         setError(null);
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/interface/request/${days}`
+                `https://jnuspacekback-production.up.railway.app/interface/request/${days}`
             );
 
             if (!response.ok) {
