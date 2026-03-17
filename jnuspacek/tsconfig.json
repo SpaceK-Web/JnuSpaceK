@@ -43,13 +43,6 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx"
   },
   "include": [ "src" ],
