@@ -1,32 +1,61 @@
-// 타임스탬프 파싱 결과 타입
-export interface ParsedDate {
-    year: string;
-    month: string;
-    day: string;
-    hour: string;
-    minute: string;
-    second: string;
-    formatted: string;
-    datetime: Date;
+export type Sentiment = 'positive' | 'negative' | 'neutral' | 'warning';
+
+export interface AspectAnalysis {
+  aspect: string;
+  sentiment: Sentiment;
+  target_keyword: string;
+  nuance_note?: string;
 }
 
-// 데이터 아이템 타입
-export interface DataItem {
-    timestamp: string;
-    date: ParsedDate;
-    content: string;
+export interface TextAnalysisResult {
+  text: string;
+  overall_sentiment: Sentiment;
+  aspects: AspectAnalysis[];
 }
 
-// API 응답 타입
-export type ApiResponse = Record<string, string>;
-
-// DataFetcher Props
-export interface DataFetcherProps {
-    onFetch: (days: number) => Promise<void>;
-    loading: boolean;
+export interface AudioProcessResponse {
+  user_id: string;
+  analysis: TextAnalysisResult;
 }
 
-// DataTable Props
-export interface DataTableProps {
-    data: DataItem[];
+export interface ChatResponse {
+  user_id: string;
+  reply: string;
+}
+
+export interface EntryResponse {
+  key: string;
+  value: string;
+  detail?: string;
+  time?: string;
+  sentiment: Sentiment;
+  is_system: boolean;
+  description?: string;
+}
+
+export interface DashboardToday {
+  user_id: string;
+  date: string;
+  entries: EntryResponse[];
+  total: number;
+}
+
+export interface DailyRecord {
+  user_id: string;
+  date: string;
+  entries: EntryResponse[];
+  updated_at: string;
+}
+
+export interface DashboardHistory {
+  user_id: string;
+  records: DailyRecord[];
+}
+
+export interface ChatMessage {
+  id: string;
+  role: 'user' | 'assistant';
+  text: string;
+  timestamp: Date;
+  sentiment?: Sentiment;
 }

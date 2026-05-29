@@ -1,0 +1,436 @@
+.guardian-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.guardian-header {
+  background: linear-gradient(135deg, #1e3a5f, #2c5f8a);
+  color: white;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 14px rgba(30, 58, 95, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.guardian-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin: 0 0 4px !important;
+  color: white !important;
+}
+
+.guardian-subtitle {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 0 !important;
+}
+
+.header-nav-btn-dark {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.header-nav-btn-dark:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* ── Body Layout ─────────────────────────────────────── */
+.guardian-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.guardian-section {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Section headers ─────────────────────────────────── */
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1e3a5f !important;
+  margin: 0 !important;
+}
+
+.section-sub-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #4b5563 !important;
+  margin: 24px 0 14px !important;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.refresh-btn,
+.load-btn {
+  padding: 8px 18px;
+  background: #2c5f8a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled),
+.load-btn:hover:not(:disabled) {
+  background: #1e3a5f;
+}
+
+.refresh-btn:disabled,
+.load-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Alert Banner ────────────────────────────────────── */
+.alert-section {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 5px solid #ef4444;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 22px;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #991b1b;
+  margin-bottom: 12px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #fecaca;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.alert-key {
+  font-weight: 700;
+  color: #991b1b;
+  min-width: 64px;
+}
+
+.alert-value {
+  color: #374151;
+  flex: 1;
+}
+
+.alert-detail {
+  color: #9ca3af;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ── Summary Cards ───────────────────────────────────── */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 14px;
+}
+
+.summary-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 12px !important;
+  color: #6b7280;
+  margin: 0 0 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: #1f2937;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+.warning-text { color: #dc2626 !important; }
+.positive-text { color: #16a34a !important; }
+
+/* ── Sentiment Badge ─────────────────────────────────── */
+.sentiment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Health Grid ─────────────────────────────────────── */
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 14px;
+}
+
+.health-card {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border-top: 4px solid #e5e7eb;
+}
+
+.health-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.health-card-empty {
+  opacity: 0.45;
+}
+
+.health-card-empty:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.health-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.health-card-emoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.health-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.health-card-value {
+  font-size: 14px !important;
+  color: #4b5563;
+  margin: 8px 0 4px !important;
+  font-style: italic;
+  line-height: 1.5 !important;
+}
+
+.health-card-detail {
+  font-size: 12px !important;
+  color: #9ca3af;
+  margin: 0 0 4px !important;
+}
+
+.health-card-count {
+  font-size: 11px !important;
+  color: #d1d5db;
+  margin: 6px 0 0 !important;
+}
+
+.health-card-no-data {
+  font-size: 12px !important;
+  color: #9ca3af;
+  margin: 8px 0 0 !important;
+}
+
+/* ── Feedback states ─────────────────────────────────── */
+.error-text {
+  color: #dc2626;
+  font-size: 14px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.loading-box,
+.empty-box {
+  text-align: center;
+  padding: 48px 20px;
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* ── History Section ─────────────────────────────────── */
+.history-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.date-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-group label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.date-group input[type='date'] {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #374151;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.date-group input[type='date']:focus {
+  border-color: #2c5f8a;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-row {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.history-row-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.history-row-header:hover {
+  background: #f3f4f6;
+}
+
+.history-date {
+  font-weight: 700;
+  color: #374151;
+  min-width: 95px;
+  font-size: 14px;
+}
+
+.history-badges {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-warning { background: #fee2e2; color: #991b1b; }
+.badge-negative { background: #ffedd5; color: #9a3412; }
+.badge-positive { background: #dcfce7; color: #166534; }
+.badge-neutral { background: #f3f4f6; color: #6b7280; }
+
+.expand-arrow {
+  color: #9ca3af;
+  font-size: 12px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.history-detail {
+  padding: 14px 18px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-aspect-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.aspect-emoji {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.aspect-label {
+  font-weight: 700;
+  color: #374151;
+  min-width: 72px;
+}
+
+.aspect-values {
+  color: #6b7280;
+  flex: 1;
+  font-style: italic;
+}
+
+.no-data-text {
+  color: #9ca3af;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px 0;
+}
